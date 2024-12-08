@@ -1,11 +1,11 @@
 import streamlit as st
 import pandas as pd
-import gtts
+from gtts import gTTS
 import random
 frame="sound.mp3"
 
 def speaktext(txt,lang="en"):
-    gtts.gTTS(txt).save(frame)
+    gTTS(txt).save(frame)
     st.audio(frame)
 
 def ask():
